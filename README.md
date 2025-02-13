@@ -1,49 +1,41 @@
-# Valid Anagram
+# Prefixo Comum
 
-## Problema "Valid Anagram" (ref: LeetCode Valid Anagram)
+## Problema "Prefixo Comum" (ref: LeetCode Longest Common Prefix)
 
 ### Empresas:
-Apple, Google, Amazon, Microsoft, Adobe, Spotify, etc.
+Apple, Google, Amazon, Microsoft, Adobe, Accenture, etc.
 
 ### Descrição do Problema:
-Dadas duas palavras `s` e `t`, retornar `true` se `t` é um anagrama de `s`, ou `false` caso contrário.
+Escreva uma função para encontrar o maior prefixo comum entre um array de strings. Se não houver um prefixo comum, retorne uma string vazia `""`.
 
-Um **anagrama** é uma palavra formada pelo rearranjo das letras de outra palavra, utilizando todas as letras originais exatamente uma vez.
-
-### Limitações:
-- `1 <= s.length, t.length <= 5 * 10^4`
-- `s` e `t` contêm apenas letras minúsculas do alfabeto inglês.
+### Restrições:
+- `1 <= strs.length <= 200`
+- `0 <= strs[i].length <= 200`
+- `strs[i]` consiste apenas em letras minúsculas do alfabeto inglês.
 
 ### Exemplos:
 #### Exemplo 1:
 **Entrada:**  
-`s = "anagram"`  
-`t = "nagaram"`  
+`["flowers", "flow", "flight"]`  
 **Saída:**  
-`true`
+`"fl"`
 
 #### Exemplo 2:
 **Entrada:**  
-`s = "rat"`  
-`t = "car"`  
+`["dog", "racecar", "car"]`  
 **Saída:**  
-`false`
+`""`
 
 ---
 
 ## Assinaturas das Funções:
 
-
 ### Java:
 ```java
-public static boolean isAnagram(String s, String t) {
+public static String longestCommonPrefix(String[] v) {
     // implementação aqui
 }
 ```
-
 ---
 
-## Notas:
-- Certifique-se de testar seu código com diferentes casos de entrada.
-- Otimize sua solução para eficiência, considerando a limitação de tamanho da entrada.
 
