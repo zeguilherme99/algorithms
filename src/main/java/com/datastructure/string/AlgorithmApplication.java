@@ -3,34 +3,43 @@ package com.datastructure.string;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 @SpringBootApplication
 public class AlgorithmApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(AlgorithmApplication.class, args);
-        System.out.println(longestCommonPrefix(new String[]{"flithasdasd", "flinston", "flior", "flower"}));
+        System.out.println(invalidTransactions(new String[]{"alice,20,1200,mtv", "bob,50,1200,mtv", "alice,50,800,teste"}));
     }
 
-    public static String longestCommonPrefix(String[] v) {
-        StringBuilder strBuilder = new StringBuilder();
-        for (int i = 0; i < v.length; i++) {
-            String str = v[i];
-            char[] strArray = str.toCharArray();
+    public static List<String> invalidTransactions(String[] transactions) {
+        Arrays.sort(transactions);
 
-            if (i == 0 && strBuilder.isEmpty()) {
-                strBuilder.append(strArray);
-            }
+        String[] firstSplit = transactions[0].split(",");
+        List<String> result = new ArrayList<>();
 
-            int minLength = Math.min(strBuilder.length(), strArray.length);
-
-            for (int j = minLength - 1; j >= 0; j--) {
-                if (strBuilder.charAt(j) != strArray[j]) {
-                    strBuilder.deleteCharAt(j);
-                }
-            }
+        if (Integer.parseInt(firstSplit[2]) > 1000) {
+            result.add(String.join(",", firstSplit));
         }
 
-        return strBuilder.toString();
-    }
+        for (int i = 1; i < transactions.length; i++) {
+            String[] trSplit = transactions[i].split(",");
 
+            if ((trSplit[0].equals(firstSplit[0]) && !trSplit[3].equals(firstSplit[3]) && (Integer.parseInt(trSplit[1]) - Integer.parseInt(firstSplit[1]) <= 60))) {
+                result.add(String.join(",", trSplit));
+                if (Integer.parseInt(firstSplit[2]) <= 1000) {
+                    result.add(String.join(",", firstSplit));
+                }
+            } else if (Integer.parseInt(trSplit[2]) > 1000) {
+                result.add(String.join(",", trSplit));
+            }
+
+            firstSplit = trSplit;
+        }
+
+        return result;
+    }
 }
