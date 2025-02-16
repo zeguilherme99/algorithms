@@ -1,45 +1,30 @@
-# Transações Inválidas
+# Contagem Máxima de 1's Consecutivos
 
-## Problema "Transações" (ref: LeetCode Invalid Transactions)
-
-### Empresas:
-Apple, Google, Amazon, Microsoft, Adobe, Accenture, etc.
+## Problema "Maximum Consecutive Ones"
 
 ### Descrição do Problema:
-Uma transação é possivelmente inválida se:
-- O valor excede $1000, ou;
-- Se ocorrer dentro (ou incluindo) de 60 minutos de outra transação com o mesmo nome em uma cidade diferente.
-
-Você recebe um array de strings `transactions`, onde `transactions[i]` consiste em valores separados por vírgula representando o nome, tempo (em minutos), valor e cidade da transação. Retorne uma lista de transações que são possivelmente inválidas. A resposta pode ser retornada em qualquer ordem.
-
-### Restrições:
-- `transactions.length <= 1000`
-- Cada `transactions[i]` tem o formato `"{name},{time},{amount},{city}"`
-- Cada `{name}` e `{city}` consiste apenas em letras minúsculas do alfabeto inglês e tem tamanho entre 1 e 10.
-- Cada `{time}` consiste apenas em dígitos e representa um inteiro entre 0 e 1000.
-- Cada `{amount}` consiste apenas em dígitos e representa um inteiro entre 0 e 2000.
+Dado um array binário `nums`, retorne o número máximo de `1`s consecutivos no array.
 
 ### Exemplos:
 #### Exemplo 1:
 **Entrada:**  
-`["alice,20,800,mtv","alice,50,100,beijing"]`
+`nums = [1,1,0,1,1,1]`
 
 **Saída:**  
-`["alice,20,800,mtv","alice,50,100,beijing"]`
+`3`
+
+**Explicação:** Os primeiros dois dígitos ou os últimos três dígitos são `1`s consecutivos. O número máximo de `1`s consecutivos é `3`.
 
 #### Exemplo 2:
 **Entrada:**  
-`["alice,20,800,mtv","alice,50,1200,mtv"]`
+`nums = [1,0,1,1,0,1]`
 
 **Saída:**  
-`["alice,50,1200,mtv"]`
+`2`
 
-#### Exemplo 3:
-**Entrada:**  
-`["alice,20,800,mtv","bob,50,1200,mtv"]`
-
-**Saída:**  
-`["bob,50,1200,mtv"]`
+### Restrições:
+- `1 <= nums.length <= 10^5`
+- `nums[i]` é `0` ou `1`.
 
 ---
 
@@ -47,9 +32,8 @@ Você recebe um array de strings `transactions`, onde `transactions[i]` consiste
 
 ### Java:
 ```java
-public static List<String> invalidTransactions(String[] transactions) {
+public static int findMaxConsecutiveOnes(int[] nums) {
     // implementação aqui
 }
 ```
-
 ---
