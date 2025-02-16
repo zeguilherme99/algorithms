@@ -1,43 +1,62 @@
-# Produto Escalar de Dois Vetores
+# Vendedor com Maior Venda
 
-## Problema "Produto Escalar de Dois Vetores" (Adaptado LeetCode)
+## Problema "Vendedor com Maior Venda"
 
 ### Descrição do Problema:
-Dados dois arrays, calcule o seu produto escalar.
+Dado um array de vendedores, onde cada vendedor é representado por um objeto contendo o nome (`name`) e o valor de suas vendas (`amount`), crie uma função para encontrar e retornar o vendedor que obteve o maior valor de venda.
 
-### Exemplos:
-#### Exemplo 1:
-**Entrada:**  
-`nums1 = [1,0,0,2,3]`, `nums2 = [0,3,0,4,0]`
+### Exemplo de Entrada:
+```json
+[
+  {
+    "name": "Barry Allen",
+    "amount": 18196.0
+  },
+  {
+    "name": "Logan",
+    "amount": 4255.0
+  },
+  {
+    "name": "Maria",
+    "amount": 10298.0
+  },
+  {
+    "name": "Ana",
+    "amount": 26485.0
+  },
+  {
+    "name": "Aurora",
+    "amount": 19982.0
+  },
+  {
+    "name": "Noah",
+    "amount": 15820.0
+  },
+  {
+    "name": "Leo",
+    "amount": 21412.0
+  },
+  {
+    "name": "Alex",
+    "amount": 12000.0
+  }
+]
+```
 
-**Saída:**  
-`8`
-
-**Explicação:** O produto escalar dos arrays acima pode ser encontrado pela expressão:
-`(1 * 0) + (0 * 3) + (0 * 0) + (2 * 4) + (3 * 0) = 8`
-
-#### Exemplo 2:
-**Entrada:**  
-`nums1 = [0,1,0,0,0]`, `nums2 = [0,1,0,0,0]`
-
-**Saída:**  
-`0`
-
-#### Exemplo 3:
-**Entrada:**  
-`nums1 = [0,1,0,0,2,0,0]`, `nums2 = [1,0,0,0,3,0,4]`
-
-**Saída:**  
-`0`
+### Exemplo de Saída:
+```json
+"Ana"
+```
 
 ---
 
 ## Assinaturas das Funções:
 
+### JavaScript:
 
 ### Java:
 ```java
-public static int dotProductTwoArrays(int[] nums1, int[] nums2) {
+public static String biggerSellerAmount(Seller[] sellers) {
     // implementação aqui
 }
 ```
