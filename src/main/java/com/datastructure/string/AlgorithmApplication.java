@@ -3,24 +3,21 @@ package com.datastructure.string;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.util.Arrays;
+
 @SpringBootApplication
 public class AlgorithmApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(AlgorithmApplication.class, args);
-        System.out.println(findEvenNumberDigits(new int[]{555,901,482,1771,12}));
+        System.out.println(Arrays.toString(sortedSquare(new int[]{-4,-1,0,3,10})));
     }
 
-    public static int findEvenNumberDigits(int[] nums) {
-        int value = 0;
-
-        for (int num : nums) {
-            String strNumber = String.valueOf(num);
-
-            if (strNumber.length() % 2 == 0) {
-                value++;
-            }
+    public static int[] sortedSquare(int[] nums) {
+        for (int i = 0; i < nums.length; i++) {
+            nums[i] = (int) Math.pow(nums[i], 2);
         }
-        return value;
+        Arrays.sort(nums);
+        return nums;
     }
 }

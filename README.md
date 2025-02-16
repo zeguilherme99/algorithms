@@ -1,48 +1,37 @@
-# Números com Número Par de Dígitos
+# Quadrados de um Array Ordenado
 
-## Problema "Find Even Number Digits" (LeetCode)
+## Problema "Sorted Squares" (LeetCode)
 
 ### Descrição do Problema:
-Dado um array `nums` de inteiros, retorne quantos deles contêm um número par de dígitos.
+Dado um array de números inteiros `nums` ordenado em ordem crescente, retorne um array com os quadrados de cada número, também ordenado de forma crescente.
 
 ### Exemplos:
 #### Exemplo 1:
 **Entrada:**  
-`nums = [12,345,2,6,7896]`
+`nums = [-4,-1,0,3,10]`
 
 **Saída:**  
-`2`
+`[0,1,9,16,100]`
 
-**Explicação:**
-- `12` contém 2 dígitos (número par de dígitos).
-- `345` contém 3 dígitos (número ímpar de dígitos).
-- `2` contém 1 dígito (número ímpar de dígitos).
-- `6` contém 1 dígito (número ímpar de dígitos).
-- `7896` contém 4 dígitos (número par de dígitos).
-
-Portanto, apenas `12` e `7896` contêm um número par de dígitos.
+**Explicação:**  
+Após elevar ao quadrado, temos como resultado o array `[16, 1, 0, 9, 100]`. Em seguida, após ordenar os valores do array, temos `[0, 1, 9, 16, 100]`.
 
 #### Exemplo 2:
 **Entrada:**  
-`nums = [555,901,482,1771]`
+`nums = [-7,-3,2,3,11]`
 
 **Saída:**  
-`1`
-
-**Explicação:**
-- Apenas o número `1771` tem um número par de dígitos.
+`[4,9,9,49,121]`
 
 ---
 
 ## Assinaturas das Funções:
 
-
 ### Java:
 ```java
-public static int findNumbers(int[] nums) {
+public static int[] sortedSquares(int[] nums) {
     // implementação aqui
 }
 ```
 
 ---
-
