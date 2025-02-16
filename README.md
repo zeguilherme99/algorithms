@@ -1,39 +1,46 @@
-# Contagem Máxima de 1's Consecutivos
+# Produto Escalar de Dois Vetores
 
-## Problema "Maximum Consecutive Ones"
+## Problema "Produto Escalar de Dois Vetores" (Adaptado LeetCode)
 
 ### Descrição do Problema:
-Dado um array binário `nums`, retorne o número máximo de `1`s consecutivos no array.
+Dados dois arrays, calcule o seu produto escalar.
 
 ### Exemplos:
 #### Exemplo 1:
 **Entrada:**  
-`nums = [1,1,0,1,1,1]`
+`nums1 = [1,0,0,2,3]`, `nums2 = [0,3,0,4,0]`
 
 **Saída:**  
-`3`
+`8`
 
-**Explicação:** Os primeiros dois dígitos ou os últimos três dígitos são `1`s consecutivos. O número máximo de `1`s consecutivos é `3`.
+**Explicação:** O produto escalar dos arrays acima pode ser encontrado pela expressão:
+`(1 * 0) + (0 * 3) + (0 * 0) + (2 * 4) + (3 * 0) = 8`
 
 #### Exemplo 2:
 **Entrada:**  
-`nums = [1,0,1,1,0,1]`
+`nums1 = [0,1,0,0,0]`, `nums2 = [0,1,0,0,0]`
 
 **Saída:**  
-`2`
+`0`
 
-### Restrições:
-- `1 <= nums.length <= 10^5`
-- `nums[i]` é `0` ou `1`.
+#### Exemplo 3:
+**Entrada:**  
+`nums1 = [0,1,0,0,2,0,0]`, `nums2 = [1,0,0,0,3,0,4]`
+
+**Saída:**  
+`0`
 
 ---
 
 ## Assinaturas das Funções:
 
+
 ### Java:
 ```java
-public static int findMaxConsecutiveOnes(int[] nums) {
+public static int dotProductTwoArrays(int[] nums1, int[] nums2) {
     // implementação aqui
 }
 ```
+
+
 ---
