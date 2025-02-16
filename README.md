@@ -1,65 +1,48 @@
-# Vendedor com Maior Venda
+# Números com Número Par de Dígitos
 
-## Problema "Vendedor com Maior Venda"
+## Problema "Find Even Number Digits" (LeetCode)
 
 ### Descrição do Problema:
-Dado um array de vendedores, onde cada vendedor é representado por um objeto contendo o nome (`name`) e o valor de suas vendas (`amount`), crie uma função para encontrar e retornar o vendedor que obteve o maior valor de venda.
+Dado um array `nums` de inteiros, retorne quantos deles contêm um número par de dígitos.
 
-### Exemplo de Entrada:
-```json
-[
-  {
-    "name": "Barry Allen",
-    "amount": 18196.0
-  },
-  {
-    "name": "Logan",
-    "amount": 4255.0
-  },
-  {
-    "name": "Maria",
-    "amount": 10298.0
-  },
-  {
-    "name": "Ana",
-    "amount": 26485.0
-  },
-  {
-    "name": "Aurora",
-    "amount": 19982.0
-  },
-  {
-    "name": "Noah",
-    "amount": 15820.0
-  },
-  {
-    "name": "Leo",
-    "amount": 21412.0
-  },
-  {
-    "name": "Alex",
-    "amount": 12000.0
-  }
-]
-```
+### Exemplos:
+#### Exemplo 1:
+**Entrada:**  
+`nums = [12,345,2,6,7896]`
 
-### Exemplo de Saída:
-```json
-"Ana"
-```
+**Saída:**  
+`2`
+
+**Explicação:**
+- `12` contém 2 dígitos (número par de dígitos).
+- `345` contém 3 dígitos (número ímpar de dígitos).
+- `2` contém 1 dígito (número ímpar de dígitos).
+- `6` contém 1 dígito (número ímpar de dígitos).
+- `7896` contém 4 dígitos (número par de dígitos).
+
+Portanto, apenas `12` e `7896` contêm um número par de dígitos.
+
+#### Exemplo 2:
+**Entrada:**  
+`nums = [555,901,482,1771]`
+
+**Saída:**  
+`1`
+
+**Explicação:**
+- Apenas o número `1771` tem um número par de dígitos.
 
 ---
 
 ## Assinaturas das Funções:
 
-### JavaScript:
 
 ### Java:
 ```java
-public static String biggerSellerAmount(Seller[] sellers) {
+public static int findNumbers(int[] nums) {
     // implementação aqui
 }
 ```
 
-
 ---
+
