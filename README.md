@@ -1,37 +1,45 @@
-# Quadrados de um Array Ordenado
+# Duplicar Zeros
 
-## Problema "Sorted Squares" (LeetCode)
+## Problema "Duplicate Zeros" (LeetCode)
 
 ### Descrição do Problema:
-Dado um array de números inteiros `nums` ordenado em ordem crescente, retorne um array com os quadrados de cada número, também ordenado de forma crescente.
+Dado um array de inteiros `arr`, duplique cada ocorrência de zero, deslocando os elementos restantes para a direita (**shifting right**).
+
+Observe que elementos além do tamanho do array original não são escritos.
+
+Utilize a abordagem **"in-place"**, na qual a modificação é feita diretamente no array.
 
 ### Exemplos:
 #### Exemplo 1:
 **Entrada:**  
-`nums = [-4,-1,0,3,10]`
+`nums = [1,0,2,3,0,4,5,0]`
 
 **Saída:**  
-`[0,1,9,16,100]`
-
-**Explicação:**  
-Após elevar ao quadrado, temos como resultado o array `[16, 1, 0, 9, 100]`. Em seguida, após ordenar os valores do array, temos `[0, 1, 9, 16, 100]`.
+`[1,0,0,2,3,0,0,4]`
 
 #### Exemplo 2:
 **Entrada:**  
-`nums = [-7,-3,2,3,11]`
+`nums = [1,2,3]`
 
 **Saída:**  
-`[4,9,9,49,121]`
+`[1,2,3]`
 
 ---
 
 ## Assinaturas das Funções:
 
+
 ### Java:
 ```java
-public static int[] sortedSquares(int[] nums) {
+public static void duplicateZeros(int[] arr) {
     // implementação aqui
 }
 ```
 
 ---
+
+## Notas:
+- Teste sua solução com diferentes casos de entrada.
+- Certifique-se de tratar corretamente casos onde há múltiplos zeros seguidos.
+- Lembre-se de que a modificação deve ser feita **in-place**.
+

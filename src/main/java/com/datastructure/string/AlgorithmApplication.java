@@ -10,14 +10,18 @@ public class AlgorithmApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(AlgorithmApplication.class, args);
-        System.out.println(Arrays.toString(sortedSquare(new int[]{-4,-1,0,3,10})));
+        System.out.println(Arrays.toString(duplicateZeros(new int[]{1, 0, 2, 3, 0, 4, 5, 0})));
     }
 
-    public static int[] sortedSquare(int[] nums) {
-        for (int i = 0; i < nums.length; i++) {
-            nums[i] = (int) Math.pow(nums[i], 2);
+    public static int[] duplicateZeros(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == 0) {
+                for (int j = arr.length - 1; j > i; j--) {
+                    arr[j] = arr[j - 1];
+                }
+                i++;
+            }
         }
-        Arrays.sort(nums);
-        return nums;
+        return arr;
     }
 }
