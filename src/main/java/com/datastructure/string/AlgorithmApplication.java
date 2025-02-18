@@ -10,18 +10,17 @@ public class AlgorithmApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(AlgorithmApplication.class, args);
-        System.out.println(Arrays.toString(duplicateZeros(new int[]{1, 0, 2, 3, 0, 4, 5, 0})));
+        System.out.println(Arrays.toString(merge(new int[]{1, 2, 3, 0, 0, 0}, 3, new int[]{2, 5, 6}, 3)));
     }
 
-    public static int[] duplicateZeros(int[] arr) {
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] == 0) {
-                for (int j = arr.length - 1; j > i; j--) {
-                    arr[j] = arr[j - 1];
-                }
-                i++;
-            }
+    public static int[] merge(int[] nums1, int m, int[] nums2, int n) {
+        int length = m + n;
+        int number = 0;
+        for (int i = m; i < length; i++) {
+            nums1[i] = nums2[number];
+            number++;
         }
-        return arr;
+        Arrays.sort(nums1);
+        return nums1;
     }
 }

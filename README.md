@@ -1,45 +1,57 @@
-# Duplicar Zeros
+# Merge Arrays
 
-## Problema "Duplicate Zeros" (LeetCode)
+## Problema "Merge Arrays" (LeetCode)
 
 ### Descrição do Problema:
-Dado um array de inteiros `arr`, duplique cada ocorrência de zero, deslocando os elementos restantes para a direita (**shifting right**).
+Dado dois arrays de números inteiros `nums1` e `nums2`, ordenados em ordem crescente, sendo `m` e `n` seus tamanhos, respectivamente.
 
-Observe que elementos além do tamanho do array original não são escritos.
+Junte os arrays `nums1` e `nums2` em um único array ordenado de forma crescente.
 
-Utilize a abordagem **"in-place"**, na qual a modificação é feita diretamente no array.
+O array final ordenado **não deve ser retornado pela função**, mas sim armazenado dentro do array `nums1`. Para acomodar os elementos, `nums1` possui um comprimento de `m + n`.
 
 ### Exemplos:
 #### Exemplo 1:
 **Entrada:**  
-`nums = [1,0,2,3,0,4,5,0]`
+`nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3`
 
 **Saída:**  
-`[1,0,0,2,3,0,0,4]`
+`[1,2,2,3,5,6]`
+
+**Explicação:**  
+Os arrays que queremos juntar são `[1,2,3]` e `[2,5,6]`. O resultado ao fazer o merge é `[1,2,2,3,5,6]`.
 
 #### Exemplo 2:
 **Entrada:**  
-`nums = [1,2,3]`
+`nums1 = [1], m = 1, nums2 = [], n = 0`
 
 **Saída:**  
-`[1,2,3]`
+`[1]`
+
+**Explicação:**  
+Os arrays que queremos juntar são `[1]` e `[]`. O resultado ao fazer o merge é `[1]`.
+
+#### Exemplo 3:
+**Entrada:**  
+`nums1 = [0], m = 0, nums2 = [1], n = 1`
+
+**Saída:**  
+`[1]`
+
+**Explicação:**  
+Os arrays que queremos juntar são `[]` e `[1]`. O resultado ao fazer o merge é `[1]`.
 
 ---
 
 ## Assinaturas das Funções:
 
+### JavaScript:
 
 ### Java:
 ```java
-public static void duplicateZeros(int[] arr) {
+public static void merge(int[] nums1, int m, int[] nums2, int n) {
     // implementação aqui
 }
 ```
 
 ---
-
-## Notas:
-- Teste sua solução com diferentes casos de entrada.
-- Certifique-se de tratar corretamente casos onde há múltiplos zeros seguidos.
-- Lembre-se de que a modificação deve ser feita **in-place**.
 
