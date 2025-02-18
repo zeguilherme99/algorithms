@@ -1,57 +1,41 @@
-# Merge Arrays
+# Verificar Valores Duplicados
 
-## Problema "Merge Arrays" (LeetCode)
+## Problema "Contains Duplicate" (LeetCode)
 
 ### Descrição do Problema:
-Dado dois arrays de números inteiros `nums1` e `nums2`, ordenados em ordem crescente, sendo `m` e `n` seus tamanhos, respectivamente.
-
-Junte os arrays `nums1` e `nums2` em um único array ordenado de forma crescente.
-
-O array final ordenado **não deve ser retornado pela função**, mas sim armazenado dentro do array `nums1`. Para acomodar os elementos, `nums1` possui um comprimento de `m + n`.
+Dado um array de números inteiros `nums`, retorne `true` se houver valores repetidos ou `false` se não houver repetição de valores no array.
 
 ### Exemplos:
 #### Exemplo 1:
 **Entrada:**  
-`nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3`
+`nums = [1,2,3,1]`
 
 **Saída:**  
-`[1,2,2,3,5,6]`
-
-**Explicação:**  
-Os arrays que queremos juntar são `[1,2,3]` e `[2,5,6]`. O resultado ao fazer o merge é `[1,2,2,3,5,6]`.
+`true`
 
 #### Exemplo 2:
 **Entrada:**  
-`nums1 = [1], m = 1, nums2 = [], n = 0`
+`nums = [1,2,3,4]`
 
 **Saída:**  
-`[1]`
-
-**Explicação:**  
-Os arrays que queremos juntar são `[1]` e `[]`. O resultado ao fazer o merge é `[1]`.
+`false`
 
 #### Exemplo 3:
 **Entrada:**  
-`nums1 = [0], m = 0, nums2 = [1], n = 1`
+`nums = [1,1,1,3,3,4,3,2,4,2]`
 
 **Saída:**  
-`[1]`
-
-**Explicação:**  
-Os arrays que queremos juntar são `[]` e `[1]`. O resultado ao fazer o merge é `[1]`.
+`true`
 
 ---
 
 ## Assinaturas das Funções:
 
-### JavaScript:
-
 ### Java:
 ```java
-public static void merge(int[] nums1, int m, int[] nums2, int n) {
+public static boolean containsDuplicate(int[] nums) {
     // implementação aqui
 }
 ```
 
 ---
-
