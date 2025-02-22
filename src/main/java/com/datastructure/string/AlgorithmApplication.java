@@ -8,15 +8,13 @@ public class AlgorithmApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(AlgorithmApplication.class, args);
-        System.out.println(sumNaturals(4));
+        System.out.println(factorial(4));
     }
 
-    public static int sumNaturals(int n) {
-
+    public static int factorial(int n) {
         if (n == 0) {
-            return 0;
+            return 1;
         }
-        return n + sumNaturals(n - 1);
-
+        return n * factorial(n - 1);
     }
 }
