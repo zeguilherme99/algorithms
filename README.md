@@ -1,31 +1,31 @@
-# Verificar Valores Duplicados
+# Soma naturais
 
-## Problema "Contains Duplicate" (LeetCode)
+## Problema "soma-naturais"
 
 ### Descrição do Problema:
-Dado um array de números inteiros `nums`, retorne `true` se houver valores repetidos ou `false` se não houver repetição de valores no array.
+Faça uma função que, dado um número natural N, retorne a soma dos números de 0 até N.
 
 ### Exemplos:
 #### Exemplo 1:
 **Entrada:**  
-`nums = [1,2,3,1]`
+`0`
 
 **Saída:**  
-`true`
+`0`
 
 #### Exemplo 2:
 **Entrada:**  
-`nums = [1,2,3,4]`
+`2`
 
 **Saída:**  
-`false`
+`3`
 
 #### Exemplo 3:
 **Entrada:**  
-`nums = [1,1,1,3,3,4,3,2,4,2]`
+`4`
 
 **Saída:**  
-`true`
+`10`
 
 ---
 
@@ -33,7 +33,7 @@ Dado um array de números inteiros `nums`, retorne `true` se houver valores repe
 
 ### Java:
 ```java
-public static boolean containsDuplicate(int[] nums) {
+public static int sumNaturals(int n) {
     // implementação aqui
 }
 ```
