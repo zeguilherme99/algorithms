@@ -1,9 +1,10 @@
-# Soma naturais
+# Fibonacci
 
-## Problema "fatorial"
+## Problema "fibonacci"
 
 ### Descrição do Problema:
-O fatorial de um número natural N é a multiplicação de 1 até N, exceto para o valor 0 (zero), cujo fatorial por definição é 1. Faça uma função para retornar o fatorial de um dado número.
+A sequência de Fibonacci começa com 0, 1, e depois cada número é a soma de seus dois antecessores: 0 1 1 2 3 5 8 13...
+Faça uma função para retornar o valor de uma dada posição da sequência de Fibonacci.
 
 ### Exemplos:
 #### Exemplo 1:
@@ -11,21 +12,21 @@ O fatorial de um número natural N é a multiplicação de 1 até N, exceto para
 `0`
 
 **Saída:**  
-`1`
+`0`
 
 #### Exemplo 2:
 **Entrada:**  
-`3`
+`1`
 
 **Saída:**  
-`6`
+`1`
 
 #### Exemplo 3:
 **Entrada:**  
-`4`
+`6`
 
 **Saída:**  
-`24`
+`8`
 
 ---
 
@@ -33,7 +34,7 @@ O fatorial de um número natural N é a multiplicação de 1 até N, exceto para
 
 ### Java:
 ```java
-public static int factorial(int n) {
+public static int fib(int n) {
     // implementação aqui
 }
 ```
