@@ -1,32 +1,30 @@
-# Fibonacci
+# Reverse
 
-## Problema "fibonacci"
+## Problema "reverse"
 
 ### Descrição do Problema:
-A sequência de Fibonacci começa com 0, 1, e depois cada número é a soma de seus dois antecessores: 0 1 1 2 3 5 8 13...
-Faça uma função para retornar o valor de uma dada posição da sequência de Fibonacci.
-
+Faça uma função que receba uma lista (de qualquer tipo) e retorne a lista reversa.
 ### Exemplos:
 #### Exemplo 1:
 **Entrada:**  
-`0`
+`[]`
 
 **Saída:**  
-`0`
+`[]`
 
 #### Exemplo 2:
 **Entrada:**  
-`1`
+`["azul"]`
 
 **Saída:**  
-`1`
+`["azul"]`
 
 #### Exemplo 3:
 **Entrada:**  
-`6`
+`["azul", "verde", "preto", "rosa"]`
 
 **Saída:**  
-`8`
+`["rosa", "preto, "verde", "azul"]`
 
 ---
 
@@ -34,7 +32,7 @@ Faça uma função para retornar o valor de uma dada posição da sequência de 
 
 ### Java:
 ```java
-public static int fib(int n) {
+public static <T> List<T> reverse(List<T> list) {
     // implementação aqui
 }
 ```
