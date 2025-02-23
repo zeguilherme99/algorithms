@@ -12,14 +12,18 @@ public class AlgorithmApplication {
     }
 
     public static int fibonacci(int n) {
+        return fibonacciTailRecursive(n, 0, 1);
+    }
+
+    public static int fibonacciTailRecursive(int n, int firstNumber, int secondNumber) {
         if (n == 0) {
-            return 0;
+            return firstNumber;
         }
 
         if (n == 1) {
-            return 1;
+            return secondNumber;
         }
 
-        return fibonacci(n - 1) + fibonacci(n - 2);
+        return fibonacciTailRecursive(n - 1, secondNumber, secondNumber + firstNumber);
     }
 }
