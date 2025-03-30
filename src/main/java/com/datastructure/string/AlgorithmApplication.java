@@ -8,22 +8,27 @@ public class AlgorithmApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(AlgorithmApplication.class, args);
-        System.out.println(fibonacci(7));
+        System.out.println(binarySearch(new int[]{0, 21, 42, 53, 64, 75, 86, 97}, 10));
     }
 
-    public static int fibonacci(int n) {
-        return fibonacciTailRecursive(n, 0, 1);
+    public static int binarySearch(int[] nums, int number) {
+        return binarySearchRecursive(nums, 0, nums.length - 1, number);
     }
 
-    public static int fibonacciTailRecursive(int n, int firstNumber, int secondNumber) {
-        if (n == 0) {
-            return firstNumber;
+    public static int binarySearchRecursive(int[] nums, int initiate, int last, int number) {
+
+        if (initiate > last) {
+            return -1;
         }
 
-        if (n == 1) {
-            return secondNumber;
-        }
+        int num = (last + initiate) / 2;
 
-        return fibonacciTailRecursive(n - 1, secondNumber, secondNumber + firstNumber);
+        if (nums[num] == number) {
+            return num;
+        } else if (nums[num] < number) {
+            return binarySearchRecursive(nums, num + 1, last, number);
+        } else {
+            return binarySearchRecursive(nums, initiate, num - 1, number);
+        }
     }
 }
