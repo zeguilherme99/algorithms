@@ -3,32 +3,27 @@ package com.datastructure.string;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.util.Arrays;
+
 @SpringBootApplication
 public class AlgorithmApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(AlgorithmApplication.class, args);
-        System.out.println(binarySearch(new int[]{0, 21, 42, 53, 64, 75, 86, 97}, 10));
+        System.out.println(Arrays.toString(bubbleSort(new int[]{0, 42, 32, 44, 64, 75, 86, 97})));
     }
 
-    public static int binarySearch(int[] nums, int number) {
-        return binarySearchRecursive(nums, 0, nums.length - 1, number);
-    }
+    public static int[] bubbleSort(int[] nums) {
+        for (int i = 0; i < nums.length - 1; i++) {
+            int number = nums[i];
+            int nextNumber = nums[i + 1];
 
-    public static int binarySearchRecursive(int[] nums, int initiate, int last, int number) {
-
-        if (initiate > last) {
-            return -1;
+            if (number > nextNumber) {
+                nums[i + 1] = number;
+                nums[i] = nextNumber;
+            }
         }
 
-        int num = (last + initiate) / 2;
-
-        if (nums[num] == number) {
-            return num;
-        } else if (nums[num] < number) {
-            return binarySearchRecursive(nums, num + 1, last, number);
-        } else {
-            return binarySearchRecursive(nums, initiate, num - 1, number);
-        }
+        return nums;
     }
 }
