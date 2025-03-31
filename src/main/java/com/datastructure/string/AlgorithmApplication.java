@@ -10,24 +10,18 @@ public class AlgorithmApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(AlgorithmApplication.class, args);
-        System.out.println(Arrays.toString(selectionSort(new int[]{0, 42, 32, 44, 64, 75, -2, 97})));
+        System.out.println(Arrays.toString(insertionSort(new int[]{0, 32, 42, -2, 64, 4, -3, 97})));
     }
 
-    public static int[] selectionSort(int[] nums) {
-        for (int i = 0; i < nums.length - 1; i++) {
-            int minIndex = i;
-            for (int j = i + 1; j < nums.length; j++) {
-                int number = nums[j];
-                if (number < nums[minIndex]) {
-                    minIndex = j;
-                }
-                System.out.println(Arrays.toString(nums));
+    public static int[] insertionSort(int[] nums) {
+        for (int i = 1; i < nums.length; i++) {
+            int index = i;
+            int aux = nums[i];
+            for (int j = i - 1; j >= 0 && nums[j] > aux; j--) {
+                nums[j + 1] = nums[j];
+                index = j;
             }
-            if (minIndex != i) {
-                int aux = nums[i];
-                nums[i] = nums[minIndex];
-                nums[minIndex] = aux;
-            }
+            nums[index] = aux;
         }
 
         return nums;
