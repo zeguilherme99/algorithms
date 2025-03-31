@@ -10,24 +10,23 @@ public class AlgorithmApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(AlgorithmApplication.class, args);
-        System.out.println(Arrays.toString(bubbleSort(new int[]{0, 42, 32, 44, 64, 75, -2, 97})));
+        System.out.println(Arrays.toString(selectionSort(new int[]{0, 42, 32, 44, 64, 75, -2, 97})));
     }
 
-    public static int[] bubbleSort(int[] nums) {
-        for (int i = 0; i < nums.length; i++) {
-            boolean swapped = false;
-            for (int j = 0; j < nums.length -1 - i; j++) {
+    public static int[] selectionSort(int[] nums) {
+        for (int i = 0; i < nums.length - 1; i++) {
+            int minIndex = i;
+            for (int j = i + 1; j < nums.length; j++) {
                 int number = nums[j];
-                int nextNumber = nums[j + 1];
-
-                if (number > nextNumber) {
-                    nums[j + 1] = number;
-                    nums[j] = nextNumber;
-                    swapped = true;
+                if (number < nums[minIndex]) {
+                    minIndex = j;
                 }
+                System.out.println(Arrays.toString(nums));
             }
-            if (!swapped) {
-                break;
+            if (minIndex != i) {
+                int aux = nums[i];
+                nums[i] = nums[minIndex];
+                nums[minIndex] = aux;
             }
         }
 
